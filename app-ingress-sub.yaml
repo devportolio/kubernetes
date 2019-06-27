@@ -6,17 +6,15 @@ metadata:
      kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: app1.astig.com
+  - host: app1.astig.it
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: appsvc1
           servicePort: 80
-  - host: app2.astig.com
+  - host: app2.astig.it
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: appsvc2
           servicePort: 80
