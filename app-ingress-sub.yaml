@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app-ingress-sub
+  annotations:
+     kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: app1.astig.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: appsvc1
+          servicePort: 80
+  - host: app2.astig.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: appsvc2
+          servicePort: 80
